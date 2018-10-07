@@ -18,8 +18,9 @@ read wine
     wget -nc https://dl.winehq.org/wine-builds/Release.key
     sudo apt-key add Release.key
 
-    sudo touch /etc/apt/sources.list.d/winehq.list
-    sudo cat winehq.list > /etc/apt/sources.list.d/winehq.list
+    #sudo touch /etc/apt/sources.list.d/winehq.list
+    #sudo cat winehq.list > /etc/apt/sources.list.d/winehq.list
+    sudo cp -rf winehq.list /etc/apt/sources.list.d/
 
     sudo apt update
     sudo apt-get install --install-recommends winehq-stable
