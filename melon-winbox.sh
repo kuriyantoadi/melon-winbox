@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Program Melon Winbox #
-
+clear
 echo "Selamat Datang di Program melon winbox"
 echo "Program ini akan membantu anda install winbox dengan mudah"
 echo ""
@@ -18,7 +18,7 @@ read wine
     wget -nc https://dl.winehq.org/wine-builds/Release.key
     sudo apt-key add Release.key
 
-    touch /etc/apt/sources.list.d/winehq.list
+    sudo touch /etc/apt/sources.list.d/winehq.list
     repowine="deb http://dl.winehq.org/wine-builds/debian/ stretch main"
     echo $repowine > /etc/apt/sources.list.d/winehq.list
 
@@ -32,9 +32,9 @@ read wine
   clear
   wget https://download.mikrotik.com/routeros/winbox/3.18/winbox.exe
 
-  mkdir /opt/Winbox
-  cp winbox.exe /opt/Winbox
-  rm winbox.exe
+  sudo mkdir /opt/Winbox
+  sudo cp winbox.exe /opt/Winbox
+  sudo rm winbox.exe
 
 
 echo "Apakah anda masukan wine di alias anda? (Y atau T)"
