@@ -23,7 +23,7 @@ read wine
     sudo cp -rf winehq.list /etc/apt/sources.list.d/
 
     sudo apt update
-    sudo apt-get install winehq-stable -y
+    sudo apt-get install wine -y
 
   else
   	echo "Anda sudah mempunyai wine"
@@ -51,5 +51,5 @@ read aliaswine
 
 echo "winbox anda sudah terinstall"
 echo $aliasaktif
-cd $HOME
+cd ~
 sources .bashrc
