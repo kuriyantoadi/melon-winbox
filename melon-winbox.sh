@@ -19,8 +19,7 @@ read wine
     sudo apt-key add Release.key
 
     sudo touch /etc/apt/sources.list.d/winehq.list
-    repowine="deb http://dl.winehq.org/wine-builds/debian/ stretch main"
-    sudo echo $repowine > /etc/apt/sources.list.d/winehq.list
+    sudo cat winehq.list > /etc/apt/sources.list.d/winehq.list
 
     sudo apt update
     sudo apt-get install --install-recommends winehq-stable
