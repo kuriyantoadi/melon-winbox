@@ -20,7 +20,7 @@ read wine
 
     sudo touch /etc/apt/sources.list.d/winehq.list
     repowine="deb http://dl.winehq.org/wine-builds/debian/ stretch main"
-    echo $repowine > /etc/apt/sources.list.d/winehq.list
+    sudo echo $repowine > /etc/apt/sources.list.d/winehq.list
 
     sudo apt update
     sudo apt-get install --install-recommends winehq-stable
