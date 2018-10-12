@@ -24,6 +24,7 @@ read wine
 
     sudo apt update
     sudo apt-get install wine -y
+    sudo apt-get install wine-stable -y
 
   else
   	echo "Anda sudah mempunyai wine"
@@ -36,14 +37,13 @@ read wine
   sudo cp winbox.exe /opt/Winbox
   sudo rm winbox.exe
 
-
 echo "Apakah anda masukan wine di alias anda? (Y atau T)"
 read aliaswine
 
   if [ y = $aliaswine ]
   then
     aliasaktif="wine bisa dijalankan dengan memasukan perintah 'wine' "
-    alwinbox=" alias winbox='/opt/Winbox/winbox.exe' "
+    alwinbox=" alias winbox='sudo wine /opt/Winbox/winbox.exe' "
     echo $alwinbox >> $HOME/.bashrc
   else
     echo "alias wine tidak terpasang"
@@ -51,5 +51,4 @@ read aliaswine
 
 echo "winbox anda sudah terinstall"
 echo $aliasaktif
-cd ~
-sources .bashrc
+source $HOME/.bashrc
